@@ -1,0 +1,22 @@
+Summary of Class
+
+public class Date {                 // name of a class is a Noun
+private int month;                  // private instance variables HAS A relationship
+public Date(int m) {                // Constructor method(s)
+    month=m;                        // no return type match the class name
+}                                   // set the initial state of the object
+
+public void setMonth(int month)     // mutator methods (setter) - one per instance variable
+  this.month=month;
+}
+
+public int getMonth() {             // accessor methods (getter) - one per instance variable
+    return month;
+}
+
+public String toString() {          // toString method
+  String result;                    // returns a String representation of the object
+  result = "Month "+month;          // all of the instance variables' values need to be in the String
+  return results;
+  }
+}
