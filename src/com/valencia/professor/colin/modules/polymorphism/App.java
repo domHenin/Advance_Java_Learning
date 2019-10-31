@@ -2,53 +2,60 @@ package com.valencia.professor.colin.modules.polymorphism;
 
 public class App {
     public static void main(String[] args) {
-        Animal myPet = new Animal(8);
-        Dog max = new Dog(35, "Max");
-        Dog rover = new Dog(35, "Rover");
-        Animal pet = new Dog(45, "Rover");
-        Cat fluffy = new Cat(5, "Tigger", true);
+        Animal anAnimal = new Animal(12);
 
+        Dog rover = new Dog(23, "ROVER", "Red");
+        Dog max = new Dog(23, "MAX", "Brown");
 
-        if (max.equals(rover)) {
-            System.out.println("Max and rover are equal.");
-        } else {
-            System.out.println("Max and rover are NOT equal.");
-        }
+        Cat fluffy = new Cat(4, "FLUFFY", "Orange/Black");
+        Cat snowy = new Cat(5, "SNOWY", "White");
+
+        Geko crested = new Geko(.19, "CRESTED", "Male");
+        Geko cresty = new Geko(.12, "CRESTY", "Female");
+
 
 
 //lines 12-16 are examples of Polymorphism
-        Animal newPet;
-        newPet = fluffy;
+//        Animal newPet;
+//        newPet = fluffy;
+//        System.out.println(newPet);
+//        newPet= max;
 //        System.out.println(newPet);
 
-        newPet= max;
-//        System.out.println(newPet);
-
-//        System.out.println(myPet);
-//        System.out.println("\n");
-//        System.out.println(gizmo);
-//        System.out.println("\n");
-//        System.out.println(pet);
-//        System.out.println("\n");
-//        System.out.println(tigger);
-//        System.out.println("\n");
-//        System.out.println(newPet);
-
+        foo(rover);
         foo(max);
         foo(fluffy);
-        foo(myPet);
+        foo(snowy);
+        foo(crested);
+        foo(cresty);
+
+        if (rover.equals(max)) {
+            System.out.println("The dogs are EQUAL!");
+        } else {
+            System.out.println("The dogs are NOT EQUAL!");
+        }
+
+        if (fluffy.equals(snowy)) {
+            System.out.println("The cats are EQUAL!");
+        } else {
+            System.out.println("The cats are NOT EQUAL!");
+        }
+
+        if (crested.equals(cresty)) {
+            System.out.println("The gekos are EQUAL!");
+        } else {
+            System.out.println("The gekos are NOT EQUAL!");
+        }
+
+
     }
 
     public static void foo(Animal animal) {
-        if (animal instanceof Cat) {
-            System.out.println("Inside foo(): I'm a Cat named:"+((Cat) animal).getName());
-        }
+        if (animal instanceof Dog) { System.out.println(animal.toString()); }
 
-        if (animal instanceof Dog) {
-            System.out.println("Inside foo(): I'm a Dog name: "+((Dog) animal).getName());
-        }
+        if (animal instanceof Cat) { System.out.println(animal.toString()); }
 
-        System.out.println("I'm in foo():"+animal.toString());
+        if (animal instanceof Geko) { System.out.println(animal.toString()); }
     }
 }
 

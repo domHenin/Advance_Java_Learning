@@ -1,40 +1,41 @@
 package com.valencia.professor.colin.modules.polymorphism;
 
-public class Cat extends Animal {
+public class Geko extends Animal {
     private String name;
-    private String furColor;
+    private String gender;
 
-    public Cat(double weight, String name, String furColor) {
+    public Geko(double weight, String name, String gender) {
         super(weight);
         this.name = name;
-        this.furColor = furColor;
+        this.gender = gender;
     }
 
     public void setName(String name) { this.name = name; }
-    public void setFurColor(String furColor) { this.furColor = furColor; }
+    public void setGender(String gender) { this.gender = gender; }
+
 
     public String getName() { return name; }
-    public String getFurColor() { return furColor; }
+    public String getGender() { return gender; }
+
 
     public boolean equals(Object obj) {
-        if (!(obj instanceof Cat)) {
+        if(!(obj instanceof Geko)) {
             return false;
         }
 
         boolean results=false;
 
-        if (getWeight() == ((Cat) obj).getWeight()) {
+        if (getWeight() == ((Geko) obj).getWeight()) {
             results=true;
         }
 
         return results;
-
     }
 
     public String toString() {
         String result;
-        result="I'm a cat Named: "+name+" "+
-                "with a fur color of: "+furColor+" and "+
+        result="I'm a geko, Named: "+name+" "+
+                "with a gender of: "+gender+" and "+
                 super.toString();
         return result;
     }
