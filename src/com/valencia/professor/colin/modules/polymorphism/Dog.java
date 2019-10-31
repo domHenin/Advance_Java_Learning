@@ -1,5 +1,7 @@
 package com.valencia.professor.colin.modules.polymorphism;
 
+import java.io.ObjectInputStream;
+
 public class Dog extends Animal {
     private String name;
 
@@ -16,6 +18,19 @@ public class Dog extends Animal {
         String result;
         result="Dog Info:: Name: "+name+"\n"+
                 super.toString();
+        return result;
+    }
+
+    public boolean equals(Object obj) {
+        if (!(obj instanceof Dog)) {
+            return false;
+        }
+
+        boolean result=false;
+
+        if ( this.getWeight() == (((Dog)obj).getWeight())) {
+            result=true;
+        }
         return result;
     }
 }
