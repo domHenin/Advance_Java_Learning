@@ -4,13 +4,13 @@ public class App {
     public static void main(String[] args) {
         Animal anAnimal = new Animal(12);
 
-        Dog rover = new Dog(23, "ROVER", "Red");
-        Dog max = new Dog(23, "MAX", "Brown");
+        Dog rover = new Dog(23, "ROVER", "Red", 2);
+        Dog max = new Dog(23, "MAX", "Brown", 13);
 
         Cat fluffy = new Cat(4, "FLUFFY", "Orange/Black");
         Cat snowy = new Cat(5, "SNOWY", "White");
 
-        Geko crested = new Geko(.19, "CRESTED", "Male");
+        Geko crested = new Geko(.12, "CRESTED", "Male");
         Geko cresty = new Geko(.12, "CRESTY", "Female");
 
 
@@ -51,7 +51,9 @@ public class App {
     }
 
     public static void foo(Animal animal) {
-        if (animal instanceof Dog) { System.out.println(animal.toString()); }
+        if (animal instanceof Dog) {
+            System.out.println(animal.toString());
+        }
 
         if (animal instanceof Cat) { System.out.println(animal.toString()); }
 
