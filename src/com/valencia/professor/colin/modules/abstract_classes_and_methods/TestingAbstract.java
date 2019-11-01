@@ -2,11 +2,11 @@ package com.valencia.professor.colin.modules.abstract_classes_and_methods;
 
 public class TestingAbstract {
     public static void main(String[] args) {
-        Animal myAnimal = new Animal(45);
+//        Animal myAnimal = new Animal(45);  --> wont compile. unable to make an instance of an abstract class
         Animal pet = new Dog(89, "MAX");
         Cat fluffy = new Cat(17, "FLUFFY", true);
 
-        foo(myAnimal);
+//        foo(myAnimal);
         foo(pet);
         foo(fluffy);
     }
