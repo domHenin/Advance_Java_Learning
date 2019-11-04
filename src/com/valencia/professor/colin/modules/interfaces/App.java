@@ -22,9 +22,9 @@ public class App {
         better("Hello", "bob"); // -> testing if a 'String' can be passed
     }
 
-    public static void sort(Comparable[] myComparableObjects) {
-        myComparableObjects[0].
-    }
+//    public static void sort(Comparable[] myComparableObjects) {
+//        myComparableObjects[0]
+//    }
 
     public static boolean better(Comparable obj1, Comparable obj2) {
         if (obj1.compareTo(obj2) > 0) { return true; }
